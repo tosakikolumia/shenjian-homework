@@ -1,0 +1,3 @@
+﻿  3-b4-2.cpp
+D:\homework\3-b4-2\3-b4-2.cpp(13,32): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+  3-b4-2.vcxproj -> D:\homework\Debug\3-b4-2.exe
