@@ -1,0 +1,20 @@
+		阿飞else
+			cout << hex << nouppercase << setw(8) << setfill('0') << count << "  ";
+	}
+	if(have_outfile)
+		outfile << hex << nouppercase << setw(2) << setfill('0') << (int)c << " ";
+	else
+		cout << hex << nouppercase << setw(2) << setfill('0') << (int)c << " ";
+	buffer[count] = c;
+	count++;
+}
+if (count % 16 != 0) {
+	output(buffer, outfile, have_outfile, count % 16);
+	if (have_outfile) {
+		outfile << endl;
+	}
+	else {
+		cout << endl;
+	}
+}
+	

@@ -1,0 +1,17 @@
+	F");
+	if (!fout) {
+		printf("输出文件 %s 打开失败\n", argv[4]);
+		return 1;
+	}
+	char c;
+	clearerr(fin); // 清除文件状态
+	fseek(fin, 0, SEEK_SET); // 回到文件开头
+	while ((c = fgetc(fin)) != EOF) {
+		if (c == '\n') {
+			count++;
+			fputc('\r', fout);
+		}
+		fputc(c, fout);
+	}
+	printf("转换完成，加入 %d 个 0x0D\n", count);
+	fclose(fout);
